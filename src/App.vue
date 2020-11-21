@@ -1,21 +1,34 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <!-- <a-button type="primary">Button</a-button> -->
-    <a-input placeholder="Basic usage" allowClear />
-    <a-select default-value="lucky" allowClear>
-      <!-- <a-select-option value="lucy" :key="'lucky'">lucy</a-select-option> -->
-    </a-select>
+    <!-- Button -->
+    <Button></Button>
+    <!-- Row -->
+    <Row></Row>
+    <!-- Input -->
+    <Input/>
+    <!-- affix -->
+    <div style="margin-top: 100px"></div>
+    <a-affix :offsetTop="100">top</a-affix>
+    <a-affix :offsetBottom="700">bottom</a-affix>
+    <!-- 面包屑 -->
+    <a-breadcrumb>
+      <a-breadcrumb-item>Home</a-breadcrumb-item>
+      <a-breadcrumb-item>About</a-breadcrumb-item>
+    </a-breadcrumb>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+import Button from './components/Button.vue'
+import Row from './components/Row.vue'
+import Input from './components/Input.vue'
 
 export default {
   name: 'App',
   components: {
-    // HelloWorld
+    Button,
+    Row,
+    Input
   }
 }
 </script>
@@ -25,8 +38,11 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  padding: 20px;  
+  height: 10000px;
   color: #2c3e50;
-  margin-top: 60px;
+  background: #a2a2a2;
+  width: 100%;
+  height: 1000%;
 }
 </style>
